@@ -35,11 +35,11 @@ const AdminAddDevice = () => {
 		}
 
 		if(!description){
-			alert("Enter username!")
+			alert("Enter description!")
 			return
 		}
 		if(!address){
-			alert("Enter password!")
+			alert("Enter address!")
 			return
 		}
         if(!client){
@@ -49,7 +49,9 @@ const AdminAddDevice = () => {
 
         
 		addDevice(data);
-        window.location.reload(false);
+        setDescription("")
+        setAddress("")
+        setClient("")
 	}
 
     const onLogOutSubmit = (e) => {
